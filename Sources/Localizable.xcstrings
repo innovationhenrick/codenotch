@@ -56955,6 +56955,116 @@
     },
     "Could not build the model-list URL": {
       "extractionState": "manual"
+    },
+    "Codenotch reads usage from tools already signed in on this Mac — it never asks for your password. Install and sign in to any of Claude Code (the terminal tool, not the Claude app), Cursor (the editor or cursor-agent), Codex, Antigravity, GLM, Grok, OpenCode, Command Code, GitHub Copilot, Kimi Code, Kiro, Amp, Apify, the Kilo CLI, or a Notion API token, and its ring appears in the notch.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Codenotch lê o uso de ferramentas já conectadas neste Mac — ele nunca pede sua senha. Instale e entre em qualquer uma destas ferramentas: Claude Code (a ferramenta de terminal, não o app Claude), Cursor (o editor ou cursor-agent), Codex, Antigravity, GLM, Grok, OpenCode, Command Code, GitHub Copilot, Kimi Code, Kiro, Amp, Apify, CLI do Kilo ou um token de API do Notion. O indicador aparecerá no notch."
+          }
+        }
+      }
+    },
+    "Premium AI credits": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créditos premium de IA"
+          }
+        }
+      }
+    },
+    "%@ credits · %d runs": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ créditos · %2$d execuções"
+          }
+        }
+      }
+    },
+    "%@ credits": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ créditos"
+          }
+        }
+      }
+    },
+    "Notion API": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API do Notion"
+          }
+        }
+      }
+    },
+    "Paste a Notion API token in Settings to read premium AI credits.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cole um token de API do Notion nos Ajustes para consultar os créditos premium de IA."
+          }
+        }
+      }
+    },
+    "Couldn't reach Notion.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível acessar o Notion."
+          }
+        }
+      }
+    },
+    "This Notion token cannot read agent insights.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este token do Notion não tem acesso às informações de uso do agente."
+          }
+        }
+      }
+    },
+    "Notion API token": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token da API do Notion"
+          }
+        }
+      }
+    },
+    "Paste a Notion API token with Agent insights access. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cole um token de API do Notion com acesso às informações de uso do agente. Esta leitura mostra créditos premium de IA e execuções, não a franquia incluída de seis horas ou mensal. O token fica armazenado no seu Chaveiro de Início de Sessão."
+          }
+        }
+      }
     }
   },
   "version": "1.0"

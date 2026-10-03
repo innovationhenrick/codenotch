@@ -1510,7 +1510,7 @@ struct SettingsView: View {
     /// this, sees four blank rings and concludes it is broken — and the
     /// distinction that catches them out is Claude *Code*, not the Claude app.
     static var setupCopy: String {
-        L10n.t("Codenotch reads usage from tools already signed in on this Mac — it never asks for your password. Install and sign in to any of Claude Code (the terminal tool, not the Claude app), Cursor (the editor or cursor-agent), Codex, Antigravity, GLM, Grok, OpenCode, Command Code, GitHub Copilot, Kimi Code, Kiro, Amp, Apify, the Kilo CLI or a Gemini API key (via Gemini CLI, OpenCode or Hermes), and its ring appears in the notch.")
+        L10n.t("Codenotch reads usage from tools already signed in on this Mac — it never asks for your password. Install and sign in to any of Claude Code (the terminal tool, not the Claude app), Cursor (the editor or cursor-agent), Codex, Antigravity, GLM, Grok, OpenCode, Command Code, GitHub Copilot, Kimi Code, Kiro, Amp, Apify, the Kilo CLI, or a Notion API token, and its ring appears in the notch.")
     }
 
     /// Said before it happens rather than after. A system dialogue asking to
@@ -2096,6 +2096,10 @@ private struct AccountRow: View {
             if provider.id == "apify" {
                 apifyTokenEntry
             }
+
+            if provider.id == "notionai" {
+                notionTokenEntry
+            }
         }
     }
 
@@ -2168,6 +2172,39 @@ private struct AccountRow: View {
                 }
             }
             Text(L10n.t("Paste a token from Apify Console › Settings › API & Integrations. Not needed after apify login, or with APIFY_TOKEN exported. Stored in your login keychain."))
+                .foregroundStyle(.tertiary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.top, 2)
+    }
+
+    @State private var notionToken = ""
+    @State private var notionTokenSaved = false
+
+    private var notionTokenEntry: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(L10n.t("Notion API token"))
+                .foregroundStyle(.secondary)
+            HStack(spacing: 8) {
+                SecureField("ntn_…", text: $notionToken)
+                    .textContentType(.password)
+                    .textFieldStyle(.roundedBorder)
+                    .labelsHidden()
+                    .frame(maxWidth: 260)
+                Button(L10n.t("Save")) {
+                    guard !notionToken.isEmpty else { return }
+                    NotionAICredentials.storeSettingsToken(notionToken)
+                    notionToken = ""
+                    notionTokenSaved = true
+                    _ = signIn(provider.id)
+                }
+                .disabled(notionToken.isEmpty)
+                if notionTokenSaved {
+                    Text(L10n.t("Saved"))
+                        .foregroundStyle(.green)
+                }
+            }
+            Text(L10n.t("Paste a Notion API token with Agent insights access. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain."))
                 .foregroundStyle(.tertiary)
                 .fixedSize(horizontal: false, vertical: true)
         }
