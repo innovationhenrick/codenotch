@@ -2204,7 +2204,7 @@ private struct AccountRow: View {
                         .foregroundStyle(.green)
                 }
             }
-            Text(L10n.t("Paste a Notion API token with Agent insights access. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain."))
+            Text(L10n.t("Paste a Notion personal access token (PAT) with the Notion API capability. Personal AI insights require a PAT; internal connection tokens return 404. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain."))
                 .foregroundStyle(.tertiary)
                 .fixedSize(horizontal: false, vertical: true)
         }

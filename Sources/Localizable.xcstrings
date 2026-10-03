@@ -57055,13 +57055,13 @@
         }
       }
     },
-    "Paste a Notion API token with Agent insights access. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain.": {
+    "Paste a Notion personal access token (PAT) with the Notion API capability. Personal AI insights require a PAT; internal connection tokens return 404. This reads premium AI credits and runs, not the included six-hour or monthly allowance. Stored in your login keychain.": {
       "extractionState": "manual",
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cole um token de API do Notion com acesso às informações de uso do agente. Esta leitura mostra créditos premium de IA e execuções, não a franquia incluída de seis horas ou mensal. O token fica armazenado no seu Chaveiro de Início de Sessão."
+            "value": "Cole um token de acesso pessoal (PAT) do Notion com a capacidade Notion API. Os insights da IA pessoal exigem um PAT; tokens de conexão interna retornam 404. Esta leitura mostra créditos premium de IA e execuções, não a franquia incluída de seis horas ou mensal. O token fica armazenado no seu Chaveiro de Início de Sessão."
           }
         }
       }
